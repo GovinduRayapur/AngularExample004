@@ -1,0 +1,40 @@
+<p>
+  customer works!
+</p>
+<h3>
+  Bank Customes
+</h3>
+<table border="2">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Amount</th>
+      <th>Profile</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of allCustomers">
+    <td>{{c.id}}</td>
+    <td>{{c.name}}</td>
+    <td>{{c.status}}</td>
+    <td>{{c.amount}}</td>
+    <td ><img src="assets/{{c.image}}" width="25"></td>
+    <td><button (click)="deleteCustomer(c.id)">Delete</button></td>
+    <td><button>Edit</button></td>  
+    <td><button>Block</button></td>  
+    <td><button>Trasact</button></td>  
+  </tr> 
+  </tbody>
+</table>
+
+<hr>
+<h3>Add Customer</h3>
+<form #customerForm="ngForm" (ngSubmit)="addCustomer(customerForm.value)">
+  Name: <input type="text" name="name" [(ngModel)]="cName">
+  &nbsp;&nbsp;
+  Amount: <input type="number" name="amount" [(ngModel)]="cAmount">&nbsp;&nbsp;
+  <button type="submit">Add Customer</button>
+</form>

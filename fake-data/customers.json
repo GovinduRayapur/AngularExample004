@@ -1,0 +1,25 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Prafful",
+      "amount": 500,
+      "status": true,
+      "image": "1.jpg"
+    },
+    {
+      "name": "govindu",
+      "amount": 430,
+      "status": true,
+      "image": "1.jpg",
+      "id": 2
+    },
+    {
+      "name": "GallyBoy",
+      "amount": 520,
+      "status": true,
+      "image": "1.jpg",
+      "id": 3
+    }
+  ]
+}
