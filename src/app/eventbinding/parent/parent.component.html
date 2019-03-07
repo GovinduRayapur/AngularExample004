@@ -1,0 +1,8 @@
+<h3>Input Output Binding</h3>
+<h5>Parent Component</h5>
+Name in Parent: {{myName}}
+<hr>
+<h5>Child Component</h5>
+<app-child [sendName]="myName" (sendNameToParent)="receivedUpdatedName($event)"></app-child>
+<br>
+<app-daughter (sendNameToParent)="helloFromGuest()"></app-daughter>

@@ -20,6 +20,8 @@ import { RemoteApiComponent } from './consume/remote-api/remote-api.component';
 import { ViewUserDetailComponent } from './consume/view-user-detail/view-user-detail.component';
 import { LiveSearchPipe } from './custompipe/live-search.pipe';
 import { CustomerComponent } from './bank/customer/customer.component';
+import { ParentComponent } from './eventbinding/parent/parent.component';
+import { ChildComponent } from './eventbinding/child/child.component';
 
 @NgModule({
   imports: [
@@ -31,6 +33,10 @@ import { CustomerComponent } from './bank/customer/customer.component';
       {
         path:'family',
         component:MotherComponent
+      },
+      {
+        path:'daughter',
+        component:DaughterComponent
       },
       {
         path:'pipe',
@@ -67,6 +73,10 @@ import { CustomerComponent } from './bank/customer/customer.component';
       {
         path:'bank',
         component: CustomerComponent
+      },
+      {
+        path:'eventbinding',
+        component: ParentComponent
       }
    ])
   ],
@@ -87,7 +97,9 @@ import { CustomerComponent } from './bank/customer/customer.component';
     RemoteApiComponent,
     ViewUserDetailComponent,
     LiveSearchPipe,
-    CustomerComponent
+    CustomerComponent,
+    ParentComponent,
+    ChildComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

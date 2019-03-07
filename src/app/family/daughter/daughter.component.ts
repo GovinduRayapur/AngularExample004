@@ -12,4 +12,8 @@ export class DaughterComponent implements OnInit {
   ngOnInit() {
   }
 
+  helloFromGuest = function(){
+    console.log("hello from random guest")
+  }
+
 }
